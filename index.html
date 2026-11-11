@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My House Imobiliária · 丸子 | 圣保罗房产</title>
+<meta name="description" content="圣保罗华人房产顾问丸子 · My House Imobiliária（CRECI PJ 444841）。住宅、店面、仓库、地皮、农场，中文全程服务。">
+<meta property="og:title" content="My House Imobiliária · 丸子 | 圣保罗房产">
+<meta property="og:description" content="住宅 · 店面 · 仓库 · 地皮 · 农场　中文全程服务">
+<meta name="theme-color" content="#EEF3E8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- 首屏：轮播大图（正式版可换成她的房源视频循环剪辑） -->
+<section class="hero" id="top">
+  <div class="hero__media" id="heroMedia"></div>
+  <div class="hero__dots" id="heroDots"></div>
+  <div class="wrap hero__in"><div class="hero__panel">
+    <span class="hero__kicker" data-i18n="hero.kicker"></span>
+    <h1 data-i18n="hero.title"></h1>
+    <p class="hero__sub" data-i18n="hero.sub"></p>
+    <div class="codebox">
+      <form id="codForm" autocomplete="off">
+        <input id="codInput" type="search" data-i18n-ph="cod.placeholder" aria-label="Cod">
+        <button class="btn btn--accent" type="submit" id="codBtn"></button>
+      </form>
+      <p class="codebox__err" id="codErr" role="status"></p>
+      <p class="codebox__hint" data-i18n="cod.hint"></p>
+    </div>
+    <div class="hero__stats">
+      <div><b id="statL">0</b><span data-i18n="stat.listings"></span></div>
+      <div><b id="statR">0</b><span data-i18n="stat.regions"></span></div>
+      <div><b id="statT">0</b><span data-i18n="stat.types"></span></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 滚动条带 -->
+<div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+
+<!-- 地图：花园俯览插画 -->
+<section class="mapsec" id="map">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">MAPA · SÃO PAULO</span><h2 data-i18n="map.title"></h2><p id="mapSub"></p></div>
+      <a class="link-arrow" href="list.html"><span data-i18n="nav.listings"></span><span id="arrow1"></span></a>
+    </div>
+    <div class="mapwrap">
+      <div class="map-legend" id="legend"></div>
+      <div class="canvas" id="canvas">
+        <div class="tilt" id="tilt"><div class="plane" id="plane"></div></div>
+        <div class="canvas__ui">
+          <button id="zIn" aria-label="zoom in"></button>
+          <button id="zOut" aria-label="zoom out"></button>
+          <button id="rotL" aria-label="rotate left"></button>
+          <button id="rotR" aria-label="rotate right"></button>
+          <button id="flat" aria-label="2D / 2.5D"></button>
+        </div>
+        <div class="canvas__hint hide" id="hint"></div>
+        <div class="canvas__note" data-i18n="map.note"></div>
+      </div>
+      <div class="region-strip" id="strip"></div>
+      <aside class="drawer" id="drawer" aria-live="polite"></aside>
+    </div>
+  </div>
+</section>
+
+<!-- 类型入口 -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">TIPOS</span><h2 data-i18n="types.title"></h2></div></div>
+    <div class="types" id="types"></div>
+  </div>
+</section>
+
+<!-- 精选 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">DESTAQUES</span><h2 data-i18n="featured.title"></h2></div>
+      <a class="link-arrow" href="list.html"><span data-i18n="featured.more"></span><span id="arrow2"></span></a>
+    </div>
+    <div class="grid" id="featured"></div>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about__photo reveal">
+      <div class="ph">丸子的形象照<br>（她在后台上传后替换）</div>
+      <div class="about__badge" id="aboutBadge"></div>
+    </div>
+    <div>
+      <span class="eyebrow">SOBRE NÓS</span>
+      <h2 class="reveal" data-i18n="about.title"></h2>
+      <p class="about__lead reveal" id="aboutLead"></p>
+      <div class="pillars" id="pillars"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div><h2 data-i18n="contact.title"></h2><p data-i18n="contact.sub"></p></div>
+      <div class="contact__btns" id="contactBtns"></div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
